@@ -130,7 +130,7 @@ Create a file named `.env` in the root folder and add:
 
 ```env
 BASE_URL=https://www.saucedemo.com
-STANDARD_USER=standard_user
+USERNAME=standard_user
 PASSWORD=secret_sauce
 ```
 
@@ -194,4 +194,4 @@ This repository includes a pre-configured `Jenkinsfile` for continuous integrati
 
 ---
 
-										**Thank You !**
+												**Thank You !**
