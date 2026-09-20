@@ -1,0 +1,16 @@
+{
+  "checkoutUser": {
+    "firstName": "SANTHOSH",
+    "lastName": "B",
+    "postalCode": "641302"
+  },
+  "items": {
+    "backpack": "Sauce Labs Backpack",
+    "bikeLight": "Sauce Labs Bike Light",
+    "boltTShirt": "Sauce Labs Bolt T-Shirt"
+  },
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/saucelabs",
+    "linkedIn": "https://www.linkedin.com/company/sauce-labs/"
+  }
+}

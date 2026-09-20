@@ -1,0 +1,18 @@
+export const inventoryLocators = {
+  inventoryContainer: '.inventory_container',
+  sortDropdown: '.product_sort_container',
+  inventoryItemPrices: '.inventory_item_price',
+  shoppingCartBadge: '.shopping_cart_badge',
+  shoppingCartLink: '.shopping_cart_link',
+  menuButton: '#react-burger-menu-btn',
+  menuCloseButton: '#react-burger-cross-btn',
+  logoutLink: '#logout_sidebar_link',
+  resetAppStateLink: '#reset_sidebar_link',
+  backpackTitle: 'text=Sauce Labs Backpack',
+  addBackpackButton: '#add-to-cart-sauce-labs-backpack',
+  removeBackpackButton: '#remove-sauce-labs-backpack',
+  addBikeLightButton: '#add-to-cart-sauce-labs-bike-light',
+  addBoltTShirtButton: '#add-to-cart-sauce-labs-bolt-t-shirt',
+  facebookLink: 'a[href*="facebook.com"]',
+  linkedInLink: 'a[href*="linkedin.com"]',
+};
