@@ -4,10 +4,10 @@ import * as testData from '../test-data/testData.json';
 
 test.describe('Sauce Demo - Capstone Automation Suite', () => {
 
-  // Scenario 1: Login, Add 1 product, and Logout
+   // Scenario 1: Login, Add 1 product, and Logout
   test('Scenario 1: User can Login, Add product to cart and Logout', async ({ loginPage, inventoryPage, page }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
     await inventoryPage.verifyOnInventoryPage();
 
     await inventoryPage.addBackpackToCart();
@@ -18,11 +18,10 @@ test.describe('Sauce Demo - Capstone Automation Suite', () => {
     await inventoryPage.clickLogout();
     await expect(page).toHaveURL(/saucedemo.com\/?$/);
   });
-
   // Scenario 2: Login, Add to cart, Complete Checkout, and Logout
   test('Scenario 2: User can Add product, proceed to checkout and Logout', async ({ loginPage, inventoryPage, cartPage, checkoutPage, page }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
 
     await inventoryPage.addBackpackToCart();
     await inventoryPage.verifyBackpackButtonText('Remove');
@@ -50,7 +49,7 @@ test.describe('Sauce Demo - Capstone Automation Suite', () => {
   // Scenario 3: Sort Price (low to high), Add item, Checkout, and Logout
   test('Scenario 3: Sort by Price low to high, Add product, Checkout and Logout', async ({ loginPage, inventoryPage, cartPage, checkoutPage, page }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
 
     await inventoryPage.selectSortOption('lohi');
     await inventoryPage.verifyPriceOrderAscending();
@@ -79,7 +78,7 @@ test.describe('Sauce Demo - Capstone Automation Suite', () => {
   // Scenario 4: Add Multiple products to cart and Logout
   test('Scenario 4: Add Multiple products to cart and Logout', async ({ loginPage, inventoryPage, page }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
 
     await inventoryPage.addMultipleProducts();
     await inventoryPage.verifyCartCount('3');
@@ -92,7 +91,7 @@ test.describe('Sauce Demo - Capstone Automation Suite', () => {
   // Scenario 5: Remove one item from cart page, checkout and Logout
   test('Scenario 5: Remove one item from cart, checkout and Logout', async ({ loginPage, inventoryPage, cartPage, checkoutPage, page }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
 
     await inventoryPage.addMultipleProducts();
     await inventoryPage.clickCartIcon();
@@ -122,7 +121,7 @@ test.describe('Sauce Demo - Capstone Automation Suite', () => {
   // Scenario 6: Verify Social Links in Footer open in new tab
   test('Scenario 6: Open Facebook and LinkedIn social links in new tabs', async ({ loginPage, context, page }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
 
     // Facebook
     const [fbPage] = await Promise.all([
@@ -146,7 +145,7 @@ test.describe('Sauce Demo - Capstone Automation Suite', () => {
   // Scenario 7: Reset App State synchronization
   test('Scenario 7: Reset App State clears cart badge', async ({ loginPage, inventoryPage }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
 
     await inventoryPage.addMultipleProducts();
     await inventoryPage.verifyCartCount('3');
@@ -161,7 +160,7 @@ test.describe('Sauce Demo - Capstone Automation Suite', () => {
   // Scenario 8: Cart button sync between detail page and main list
   test('Scenario 8: Detail page Remove button synchronizes cart count', async ({ loginPage, inventoryPage, page }) => {
     await loginPage.navigate('/');
-    await loginPage.login(ENV.USERNAME, ENV.PASSWORD);
+    await loginPage.login(ENV.STANDARD_USER, ENV.PASSWORD);
 
     await inventoryPage.addBackpackToCart();
     await inventoryPage.verifyBackpackButtonText('Remove');

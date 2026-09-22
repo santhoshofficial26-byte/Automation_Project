@@ -9,8 +9,8 @@ export class InventoryPage {
   }
 
   async verifyOnInventoryPage() {
-    await expect(this.page).toHaveURL(/.*inventory.html/);
-  }
+    await expect(this.page).toHaveURL(/.*inventory\.html/);
+}
 
   async addBackpackToCart() {
     await this.page.locator(inventoryLocators.addBackpackButton).click();
