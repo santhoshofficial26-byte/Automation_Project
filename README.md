@@ -170,9 +170,9 @@ This repository includes a pre-configured `Jenkinsfile` for continuous integrati
 
 1. Start Jenkins locally:
    ```bash
-   java -jar "F:\Jenkins\Jenkins.war" --httpPort=8085
+   java -jar "F:\Jenkins\Jenkins.war" --httpPort=9090
    ```
-2. Open `http://localhost:8085` in your browser.
+2. Open `http://localhost:9090` in your browser.
 3. Install the **NodeJS Plugin** and **Allure Jenkins Plugin** via **Manage Jenkins > Plugins**.
 4. Configure Tools under **Manage Jenkins > Tools**:
    - **NodeJS**: Name it `NodeJS` (must match `Jenkinsfile`).
@@ -188,8 +188,8 @@ This repository includes a pre-configured `Jenkinsfile` for continuous integrati
 
 ## 👤 Author
 
-- **Student / QA Engineer:** Santhosh B
-- **Project:** Playwright Automation Capstone Project
+- **QA Engineer:** Santhosh B
+- **Project:** Sauce Demo Playwright Automation Capstone Project
 - **GitHub Profile:** [@santhoshofficial26-byte](https://github.com/santhoshofficial26-byte)
 
 ---
